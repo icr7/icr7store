@@ -21,8 +21,5 @@ public class Address {
     @JsonBackReference
     private User user;
 
-    @OneToOne
-    @JoinColumn(name="product_id")
-    private Product product;
 
 }

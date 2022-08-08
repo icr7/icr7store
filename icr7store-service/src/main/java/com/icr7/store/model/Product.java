@@ -1,5 +1,6 @@
 package com.icr7.store.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -24,6 +25,10 @@ public class Product {
     @ManyToMany(mappedBy = "products")
     private List<MyOrder>orders;
 
+    @ManyToOne
+    @JsonBackReference
+    @JoinColumn(name="seller_id")
+    private User seller;
 
 
 }

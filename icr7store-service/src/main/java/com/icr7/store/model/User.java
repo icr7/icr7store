@@ -18,9 +18,8 @@ public class User {
     private List<Address> address;
     private String password;
     private String photo;
-    @OneToOne
-    @JoinColumn(name = "product_id")
-    private Product product;
+    @OneToMany(mappedBy = "seller")
+    private List<Product> product;
 
 
 }
