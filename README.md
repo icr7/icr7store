@@ -24,7 +24,7 @@ requestBody-->
 }
 
 
-# Add Product
+#Add Product
 
 >> localhost:8080/product/addProduct
 
